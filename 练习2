@@ -1,0 +1,72 @@
+class(c(1,2,3,4))
+class(c(1:3))
+class(c(true))
+class(c(TRUE))
+c(0.4:4.3)
+class(c(0.4:4.3))
+class(c("true"))
+fact <- factor(c("true","false"))
+(fact <- factor(c("true","false")))
+levels(fact)
+nlevels(fact)
+as.integer(fact)
+fact_char <- sample(c("true","false"),200000,replace = TRUE)
+fact_fac <- as.factor(fact_char)
+object.size(fact_char)
+object.size(fact_fac)
+as.character.hexmode(fact)
+as.character(fact)
+is.factor(fact)
+is(fact,"factor")
+is.logical(TRUE)
+is.list(list(w <- 1))
+ls(pattern = "^is", baseenv())
+is.numeric(1L)
+is.numeric(1)
+is.double(2L)
+is.integer(2)
+is.integer(2L)
+t <- 123.678
+as(t,"character")
+as.character(t)
+b <- c(3,4,2,5)
+b
+as(b,"data.frame")
+as.data.frame(b)
+j <- 23
+class(j) <- "character"
+is.character(j)
+b <- c("2","3","4")
+for(i in b)
+for(i in b) print(i)
+
+num <- runif(40)
+summary(num)
+
+letters
+letters[1:7]
+LETTERS
+
+first <- factor(sample(letters[1:7],40,replace = TRUE))
+summary(first)
+second <- sample(c(TRUE,FALSE,NA),40,replace = TRUE)
+summary(second)
+attributes(first)
+View(first)
+edit(first)
+fix(first)
+new_first <- edit(first)
+
+ls()
+all.names=TRUE
+ls(pattern = "s")
+ls.str()
+
+a <- 1
+b <- "haha"
+c <- FALSE
+ls()
+rm(a,b,c)
+ls()
+rm(list = ls())
+ls()
