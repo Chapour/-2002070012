@@ -1,0 +1,36 @@
+#3-1
+class(Inf)
+class(NA)
+class(NaN)
+typeof(Inf)
+typeof(NA)
+typeof(NaN)
+storage.mode(Inf)
+storage.mode(NA)
+storage.mode(NaN)
+mode(Inf)
+mode(NA)
+mode(NaN)
+
+
+
+
+#3-2
+(a <- factor(c("dog","cat","hamster","goldfish")))
+pets <- sample(a,1000,replace = TRUE)
+print(pets[1:8])
+summary(pets)
+
+
+#3-3
+a <- 0
+garlic <- "asdjh"
+cabbage <- 1234
+pea <- TRUE
+potato <- NA
+tomato <- Inf
+pumpkin <- 2
+ginger <- d
+corn <- "time"
+ls()
+ls(pattern = "a")
