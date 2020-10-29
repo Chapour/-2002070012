@@ -1,0 +1,107 @@
+1:8+3:10
+c(1,2,3,4,5) + c(3,4,5,6,7)
+sum(1:8)
+median(3:7)
+mean(7:9)
+c(23:34)+5
+6:8*2:4
+3:9/2
+abs(-9)
+abs(234)
+sqrt(45617834)
+sqrt(1000000)
+log(12)
+log(1)
+log10(10)
+log1p(10)
+log(10,10)
+log(10,10000)
+log(2,8)
+1e5
+1.23e5
+1.22345e5
+1212e2
+1e2
+1e5
+1e4
+1e05
+identical(2^4,2**4)
+identical(1,1L)
+log(1:10,2)
+log(12,e)
+sin(0)
+sin(pi/3)
+sin(pi/2)
+sin(pi/6)
+tan(pi/2)
+round(2.1238*3,4)
+floor(pi)
+ceiling(pi)
+trunc(pi)
+trunc(-12.34)
+floor(-12.34)
+factorial(5)
+factorial(170)
+choose(5,0:5)
+choose(5,5)
+c(2:4)*3 == 12
+2:6 != 6:3
+6:3
+2:6
+2;6 !=7:3
+
+
+
+2:6 != 6
+2:6 != 2
+2:6 != 6:3
+2:7 = 6:5
+2:7
+2:7 == 6:5
+1:6 == 2:1
+2:7 ==6:4
+2:7 ==6:4
+all.equal(sqrt(6)^2,6)
+all.equal(2,2L)
+
+
+
+all.equal(tan(pi/2),1.633124e+16)
+
+
+
+all.equal(2,3)
+all.equal(2,4)
+all.equal(2,8)
+all.equal(2,2+1.5e-8)
+all.equal(2,2+2e-8)
+all.equal(2,2+3e-8)
+
+
+
+
+
+
+c("a":"z")
+c(a:z)
+c("a","z")<"A"
+
+all.equal(2,3)
+
+c(Inf+Inf,Inf*Inf)
+c(NaN+1)
+
+
+1%%2
+2%%2
+3%%2
+5%%3
+18%%7
+
+
+
+x1 <- 1:10 >=5
+isTRUE(x1>=5)
+!x1
+x2 <- !x1
+!x2
