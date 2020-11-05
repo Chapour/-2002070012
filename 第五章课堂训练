@@ -1,0 +1,180 @@
+(a_list <- list(
+  c(1,2,4,6,7,8),
+  month.abb,
+  matrix(c(3,32495,4,76),nrow = 2),
+  asin,
+  matrix(c(3,32495,4,76),nrow = 4)
+))
+names(a_list) <- c("catalan","months","involutary1","arcsin")
+a_list
+b_list <- list(
+  a_list,
+  c(1,2,3)
+)
+b_list
+
+
+#
+is.recursive(list())
+is.atomic(list())
+is.atomic(numeric())
+length(a_list)
+length(b_list)
+dim(a_list)
+nrow(a_list)
+NROW(a_list)
+a1 <- list(1:3)
+a2 <- list(3:5)
+a1[[1]]+a2[[1]]
+
+
+#
+b <- list(
+  first = 1,
+  se = 2,
+  th = list(
+    al = 3.1,
+    be = 3.2
+  )
+)
+b[1:2]
+b[-2]
+b[c(TRUE,FALSE,TRUE)]
+b[[1]]
+b[["first"]]
+is.list(b[1:2])
+is.list(b[[1]])
+b$first
+b$f
+b$s
+b$t
+b[["th"]]["be"]
+b[[c("th","be")]]
+b[c(1,3,5)]
+b[c(1,3,NA)]
+b[["ha"]]
+b$ha
+b[[5]]
+
+
+#
+tired <- c(1,2,3,4,5)
+as.list(tired)
+as.character(list(1,2,3,4,5))
+as.character(a_list)
+as.numeric(a_list)
+b_list <- list(
+  one = 1,
+  two = c(2,2)
+  )
+new_what <- unlist(b_list)
+new_what
+is.list(new_what[1])
+
+
+#
+c(list(a = 1,b=2),list(4))
+c(list(a = 1,b=2),4)
+hybrid <- cbind(list(a=1,b=2),list(c=4,list(d=8)))
+hybrid
+str(hybrid)
+student_have_learnt <- list(
+  a = "so much",
+  b = "well",
+  me = NULL
+)
+length(NULL)
+length(NA)
+is.na(NULL)
+is.na(NA)
+is.null(NA)
+student_have_learnt$b <- NULL
+student_have_learnt
+student_have_learnt$b <- list(NULL)
+student_have_learnt
+aha <- formals(sd)
+class(aha)
+pairlist()
+list()
+
+
+#
+c <- data.frame(
+  x = letters[1:6],
+  y = rnorm(6),
+  z = runif(6)<0.6
+)
+class(c)
+y <- rnorm(6)
+names(y) <- month.name[5:10]
+data.frame(
+  x = letters[1:6],
+  y = y,
+  z = runif(6)<0.6
+)
+data.frame(
+  x = letters[1:6],
+  y = y,
+  z = runif(6)<0.6,
+  row.names = NULL
+)
+data.frame(
+  x = letters[1:6],
+  y = y,
+  z = runif(6)<0.6,
+  row.names = c("a","b","c","v","n","m")
+)
+rownames(c)
+colnames(c)
+dimnames(c)
+nrow(c)
+ncol(c)
+length(c)
+names(c)
+data.frame(
+  X=2,
+  Y=2:4,
+  Z=6:11
+)
+data.frame(
+  X=2,
+  Y=2:4,
+  Z=6:12
+)
+data.frame(
+  "AM" = letters[1:5],
+  ".,." = rnorm(5),
+  ",,," = runif(5) > 0.5,
+  check.names = TRUE
+)
+data.frame(
+  "AM" = letters[1:5],
+  ".,." = rnorm(5),
+  ",,," = runif(5) > 0.5,
+  check.names = FALSE
+)
+c[1:2,-3]
+c[c(FALSE,TRUE),c("x","y")]
+c[1:2,1]
+class(c[1:2,1])
+class(c[1:2,-3])
+c$x[1:3]
+c[[1]][1:3]
+c
+subset(c,y>0|z,x)
+
+
+#
+t(c)
+class(t(c))
+c1 <- data.frame(
+  z = rlnorm(6),
+  y = sample(6),
+  x = letters[3:8]
+)
+rbind(c,c1)
+cbind(c,c1)
+merge(c,c1,by = "x")
+merge(c,c1,by = "x",all = TRUE)
+colSums(c[,2:3])
+colMeans(c[,2:3])
