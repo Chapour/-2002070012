@@ -1,0 +1,95 @@
+an_environment <- new.env()
+an_environment 
+an_environment[["pythag"]] <- c(1,2,3,3)
+an_environment$root <- polyroot(c(6,-5,1))
+assign("moonday",
+       weekdays(as.Date("1989/01/01")),
+       an_environment
+       )
+an_environment[["pythag"]]
+an_environment$root
+get("moonday",an_environment)
+ls(envir = an_environment)
+ls.str(envir = an_environment)
+exists("pythag",an_environment)
+a_list <- as.list(an_environment)
+as.environment(a_list)
+list2env(a_list)
+nested_environment <- new.env(parent = an_environment)
+exists("pythag",nested_environment)
+exists("pythag",nested_environment,inherits = FALSE)
+non_s <<- c(1,2,3,4,5,5,6,7)
+get("non_s",envir = globalenv())
+head(ls(envir = baseenv()),20)
+
+
+#
+zj <- function(x,y){
+  sqrt(x^2+y^2)
+}
+zj(12,5)
+zj(y=40,x=9)
+zj1 <- function(x=3,y=4){
+  sqrt(x^2+y^2)
+}
+zj1()
+formals(zj1)
+args(zj1)
+formalArgs(zj1)
+body1 <- body(zj1)
+body1
+deparse(body1)
+normalize1 <- function(x,m=mean(x),s=sd(x)){
+  (x-m)/s
+}
+normalize2 <- normalize1(c(1,2,3,10,NA))
+mean(normalize2)
+sd(normalize2)
+normalize1(c(1,2,3,10,NA))
+normalize3 <- function(x,m=mean(x,na.rm = na.rm),s=sd(x,na.rm = na.rm),na.rm = FALSE){
+  (x-m)/s
+}
+normalize3(c(1,2,3,NA))
+normalize3(c(1,2,3,NA),na.rm = TRUE)
+normalize4 <- function(x,m=mean(x,...),s=sd(x,...),...){
+  (x-m)/s
+}
+normalize4(c(1,2,3,NA))
+normalize4(c(1,2,3,NA),na.rm = TRUE)
+do.call(zj1,list(x=3,y=4))
+dfr1 <- data.frame(x=1:5,y=rt(5,1))
+dfr2 <- data.frame(x=6:10,y=rt(5,1,1))
+dfr3 <- data.frame(x=11:15,y=rt(5,1,1))
+do.call(rbind,list(dfr1,dfr2,dfr3))
+menage <- c(1,2,3,4,5,67)
+mean(menage)
+mean(c(1,2,3,4,5,67))
+h2 <- function(x,y)x+y
+do.call(h2,list(1:5,5:1))
+do.call(function(x,y)x+y,list(1:5,5:1))
+h3 <- ecdf(rnorm(50))
+is.function(h3)
+f <- function(x5){
+  y5 <- 2
+  g <- function(y5){
+    (x5+y5)/2
+  }
+  g(x5)
+}
+f(sqrt(5))
+sqrt(5)
+f1 <- function(x5){
+  y5 <- 2
+  g(x5)
+}
+g <- function(y5){
+  (x5+y5)/2}
+f1(sqrt(5))
+x5 <- 10
+g(5)
+y4 <- 17
+h3 <- function(x4){
+  if(runif(1)>0.5)y4 <- 12
+  x4*y4
+}
+replicate(10,h3(9))
