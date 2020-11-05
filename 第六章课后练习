@@ -1,0 +1,27 @@
+#6-1
+multiples_of_pi <- new.env()
+multiples_of_pi[["two_pi"]] <- c(pi*2)
+multiples_of_pi$three_pi <- c(pi*3)
+assign(
+  "four_pi",
+  c(pi*4),
+  multiples_of_pi
+)
+ls.str(envir = multiples_of_pi)
+
+
+#6-2
+difficult <- function(x){
+  ifelse(is.finite(x),ifelse(x%%2 == 0,T,F),NA)
+}
+difficult(c(1,2,-3,0,Inf))
+
+
+#6-3
+messy <- function(y){
+  args <- args(y)
+  body <- body(y)
+  return(c(list(args),list(body))
+}
+messy(zj <- function(x,y){
+    sqrt(x^2+y^2)})
